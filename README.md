@@ -1,0 +1,1 @@
+# ant-g6-issue-template
