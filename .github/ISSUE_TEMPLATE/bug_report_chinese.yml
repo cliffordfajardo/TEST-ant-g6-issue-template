@@ -1,5 +1,5 @@
 name: '🐛 错误报告'
-description: 创建报告以帮助我们改进
+description: 报告可重复的错误或回归
 body:
   - type: markdown
     attributes:
