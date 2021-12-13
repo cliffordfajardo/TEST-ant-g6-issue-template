@@ -1,19 +1,19 @@
-name: 'Bug report'
-description: Create a report to help us improve
+name: '🐛 Bug report'
+description: Report a reproducible bug or regression
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for reporting an issue :pray:.
+        Thank you for reporting an issue :pray:
 
-        This issue tracker is for reporting bugs found in G6 (https://github.com/antvis/G6).
+        This issue tracker is for reporting reproducible bugs or regression's found in G6 (https://github.com/antvis/G6)
         If you have a question about how to achieve something and are struggling, please post a question
         inside of G6's Discussion's tab: https://github.com/antvis/G6/discussions
-        
+
         Before submitting a new bug/issue, please check the links below to see if there is a solution or question posted there already:
-         - G6's Discussion's tab: https://github.com/antvis/G6/discussions
          - G6's Issue's tab: https://github.com/antvis/G6/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc
-         - G6's closed issues tab: https://github.com/antvis/G6/issues?q=is%3Aissue+sort%3Aupdated-desc+is%3Aclosed
+         - G6's Closed issues tab: https://github.com/antvis/G6/issues?q=is%3Aissue+sort%3Aupdated-desc+is%3Aclosed
+         - G6's Discussion's tab: https://github.com/antvis/G6/discussions
 
         The more information you fill in, the better the community can help you.
   - type: textarea
@@ -26,10 +26,15 @@ body:
   - type: input
     id: link
     attributes:
-      label: Link to the Stackblitz or codesandbox that caused the error
-      description: Stackblitz.com and codesanbox.io are tools that allow you to share an example of your code.  Creating a small reproducible code example of your issue greatly helps our community understand your problem & use case a lot better and more easily. Please do not delete the Stackblitz or codesanbox after reporting!
+      label: Your Example Website or App
+      description: |
+        Which website or app were you using when the bug happened?
+        Note:
+        - Your bug will may get fixed much faster if we can run your code and it doesn't have dependencies other than the G6 npm package.
+        - To create a shareable code example you can use Stackblitz (https://stackblitz.com/) or CodeSandbox (https://codesandbox.io/s/new). Please no localhost URLs.
+        - Please read these tips for providing a minimal example: https://stackoverflow.com/help/mcve.
       placeholder: |
-        https://stackblitz.com/... or https://codesandbox.io/s/...
+        e.g. Stackblitz, Code Sandbox app url
     validations:
       required: true
   - type: textarea
@@ -53,20 +58,33 @@ body:
         As a user, I expected ___ behavior but i am seeing ___
     validations:
       required: true
+  - type: dropdown
+    attributes:
+      label: How often does this bug happen?
+      description: |
+        Following the repro steps above, how easily are you able to reproduce this bug?
+      options:
+        - Every time
+        - Often
+        - Sometimes
+        - Only once
   - type: textarea
-    id: screenshots
+    id: screenshots_or_videos
     attributes:
       label: Screenshots or Videos
-      description: If applicable, add screenshots with annotations (png, jpeg or GIF type) or a video file (mp4 or mov type) to help explain your problem. Adding a screenshot or video can dramtically help others in the community understand your situation.
+      description: |
+        If applicable, add screenshots or a video to help explain your problem.
+        For more information on the supported file image/file types and the file size limits, please refer
+        to the following link: https://docs.github.com/en/github/writing-on-github/working-with-advanced-formatting/attaching-files
       placeholder: |
-        You can drag your video or image files inside of here
+        You can drag your video or image files inside of this editor ↓
   - type: textarea
     id: platform
     attributes:
       label: Platform
       value: |
-        - OS: [e.g. macOS, Windows, Linux]
-        - Browser: [e.g. Chrome, Safari, Firefox]
+        - OS: [e.g. macOS, Windows, Linux, iOS, Android]
+        - Browser: [e.g. Chrome, Safari, Firefox, React Native]
         - Version: [e.g. 91.1]
     validations:
       required: true
