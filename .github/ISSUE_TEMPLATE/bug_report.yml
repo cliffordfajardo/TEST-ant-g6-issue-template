@@ -1,19 +1,19 @@
-name: '🐛 Bug report'
-description: Report a reproducible bug or regression
+name: '🐛 Bug Report'
+description: Report a reproducible error or regression
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for reporting an issue :pray:
+        Thank you for reporting an issue :pray:.
 
-        This issue tracker is for reporting reproducible bugs or regression's found in G6 (https://github.com/antvis/G6)
+        This issue tracker is for reporting bugs found in G6 (https://github.com/antvis/G6).
         If you have a question about how to achieve something and are struggling, please post a question
         inside of G6's Discussion's tab: https://github.com/antvis/G6/discussions
 
         Before submitting a new bug/issue, please check the links below to see if there is a solution or question posted there already:
-         - G6's Issue's tab: https://github.com/antvis/G6/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc
-         - G6's Closed issues tab: https://github.com/antvis/G6/issues?q=is%3Aissue+sort%3Aupdated-desc+is%3Aclosed
-         - G6's Discussion's tab: https://github.com/antvis/G6/discussions
+         - G6's Issue's tab: https://github.com/antvis/G6/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc
+         - G6's closed issues tab: https://github.com/antvis/G6/issues?q=is%3Aissue+sort%3Aupdated-desc+is%3Aclosed
+         - G6 Discussion's tab: https://github.com/antvis/G6/discussions
 
         The more information you fill in, the better the community can help you.
   - type: textarea
@@ -40,7 +40,7 @@ body:
   - type: textarea
     id: steps
     attributes:
-      label: Steps to reproduce
+      label: Steps to Reproduce the Bug or Issue
       description: Describe the steps we have to take to reproduce the behavior.
       placeholder: |
         1. Go to '...'
@@ -58,16 +58,6 @@ body:
         As a user, I expected ___ behavior but i am seeing ___
     validations:
       required: true
-  - type: dropdown
-    attributes:
-      label: How often does this bug happen?
-      description: |
-        Following the repro steps above, how easily are you able to reproduce this bug?
-      options:
-        - Every time
-        - Often
-        - Sometimes
-        - Only once
   - type: textarea
     id: screenshots_or_videos
     attributes:
@@ -83,8 +73,8 @@ body:
     attributes:
       label: Platform
       value: |
-        - OS: [e.g. macOS, Windows, Linux, iOS, Android]
-        - Browser: [e.g. Chrome, Safari, Firefox, React Native]
+        - OS: [e.g. macOS, Windows, Linux]
+        - Browser: [e.g. Chrome, Safari, Firefox]
         - Version: [e.g. 91.1]
     validations:
       required: true
